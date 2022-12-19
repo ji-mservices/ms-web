@@ -3,16 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalDialogModule } from 'ngx-modal-dialog';
+import { CustumModalComponent } from './custum-modal/custum-modal.component';
+import { AutenticacionGuardService } from './security/autenticacion-guard.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustumModalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ModalDialogModule.forRoot()
   ],
-  providers: [],
+  providers: [AutenticacionGuardService],
+  entryComponents:[CustumModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

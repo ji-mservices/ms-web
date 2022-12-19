@@ -4,6 +4,10 @@
 
 export const environment = {
   production: false
+  /*,
+  baseUrlSecurity:'http://localhost:8086/security/login',
+  baseUrlBackend:'http://localhost:8081/pagolinea'
+  */
 };
 
 /*
